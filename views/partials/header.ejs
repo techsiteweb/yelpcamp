@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Yelp Camp</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/main.css">
+    </head>
+    <body>
+        <!--Here we add the Nav Bar from Bootstrap-->
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" data-spy="affix" data-offset-top="197">
+        <div class="container-fluid"><!--his will give some padding and formatting-->
+            <div class="navbar-header">
+                    <!--Toggle button for collapsed items-->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#logon-items" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="/">Yelp Camp</a> <!--This is for the page brand-->
+            </div>        
+             <!--Wrap the links in a div with collapse class -->
+            <div class="collapse navbar-collapse" id="logon-items">
+                <ul class="nav navbar-nav navbar-right">
+                    <% if(currentUser){ %>
+                        <li><a href="#">Hello <%= currentUser.username %></a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    <% } else { %>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/register">Sign Up</a></li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <% if(success && success.length > 0){ %>
+            <div class="alert alert-success" role="alert">
+                <%= success %>
+            </div>
+        <% } %>
+        <% if(error && error.length > 0){ %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
+    </div>
+    
+    

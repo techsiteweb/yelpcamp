@@ -1,0 +1,44 @@
+body { 
+    padding-bottom: 70px; 
+    padding-top: 70px;
+}
+.thumbnail {
+    padding: 0;
+}
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+.form {
+    border-radius: 5px;
+    margin: auto;
+    width: 33%;
+    border: 1px solid #EAECEE;
+    box-shadow: 2px 4px 10px #F9EBEA;
+}
+
+.form-header {
+    margin: auto;
+}
+.form-fields {
+    width: 75%; 
+    margin: 25px auto;
+}
+
+.header-text {
+    width: auto;
+    margin: 20px auto;
+    text-align: center;
+}
+.created  {
+    color: #BA4A00;
+    font-size: 1.1em;
+}
+
+#delete-form {
+    display: inline;
+}

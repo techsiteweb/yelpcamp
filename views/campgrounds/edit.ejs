@@ -1,0 +1,33 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row"> <!--Here we add the grid system with "row" class-->
+        <div class="form">
+            <div class="form-header">
+                <h3 class="header-text">Edit: <span><%= foundCampGround.name %></span></h3>
+            </div>
+            <div id="content" class="form-fields">
+                <form action="/campgrounds/<%= foundCampGround._id %>?_method=PUT" method="POST">
+                    <div class="form-group">
+                        <input class="form-control" name="editcamp[name]" type="text" value= "<%= foundCampGround.name %>">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" name="editcamp[image]" type="text" value= "<%= foundCampGround.image %>">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" name="editcamp[price]" type="number" value= "<%= foundCampGround.prince %>" min="0.01" step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" name="editcamp[description]" type="text" value= "<%= foundCampGround.description %>">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-primary btn-block">Update</button>
+                    </div>
+                </form>
+            <div>
+                <a href="/campgrounds">Go Back</a>
+            </div>
+            </div>
+        </div>
+    </div>
+</div> <!--Container ends here-->
+<% include ../partials/footer %>
