@@ -67,7 +67,7 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 app.use("/campgrounds/", campGroundRoutes);
 
 //Have express listen on the provided PORT/IP
-app.listen(process.env.PORT, process.env.IP, function(){
+app.listen(process.env.PORT, process.env || 3000, function(){
     console.log("Yelp Camp Server Has Started!!!");
 });
 
