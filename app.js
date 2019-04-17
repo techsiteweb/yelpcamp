@@ -19,10 +19,11 @@ var authRoutes      = require("./routes/auth"),
     commentRoutes   = require("./routes/comments"),
     campGroundRoutes= require("./routes/campgrounds");
 
-   
 //Connect to the Campgrounds database
+var url = process.env.DATABASEURL || "mongodb://localhost:27017/yelp_camp_v13";
+mongoose.connect(url, { useNewUrlParser: true }); //connect to DB if exists if not creates it and connects to it.
 // mongoose.connect("mongodb://localhost:27017/yelp_camp_v13", { useNewUrlParser: true }); //connect to DB if exists if not creates it and connects to it.
-mongoose.connect("mongodb://admin:techsiteweb1@ds155614.mlab.com:55614/yelpcamptsw", { useNewUrlParser: true }); //connect to DB if exists if not creates it and connects to it.
+// mongoose.connect("mongodb://admin:techsiteweb1@ds155614.mlab.com:55614/yelpcamptsw", { useNewUrlParser: true }); //connect to DB if exists if not creates it and connects to it.
 mongoose.set('useCreateIndex', true);
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
