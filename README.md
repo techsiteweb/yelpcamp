@@ -19,7 +19,6 @@ Yelp Camp development is focused on the following aspects:
 * RESTful Routes
 * Route Protection
 * Data writing and retrieval
-* Picture Gallery
 
 ## Technologies
 
