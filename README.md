@@ -2,17 +2,17 @@
 CampSites Around The World
 
 ```
-Webapp offering Camp Sites for rent around the World.
+Webapp offering CampSites for rent around the World.
 ```
 
 ## Introduction
 
 This is a responsive multi-page web application with backend connection.
 As a visitor you only have access to view the camps and their basic information including images, comments, author and price.
-In order to add a camp site or create a comment the visitor needs to be logged in. New users can sign up.
+In order to add a campsite or create a comment the visitor needs to be logged in. New users can sign up.
 Authenticated users cannot edit or delete comments or campsites not created by them.
 
-YelpCamp development is focused on the following aspects:
+Yelp Camp development is focused on the following aspects:
 
 * User Authentication
 * User Authorization
